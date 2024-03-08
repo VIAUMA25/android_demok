@@ -1,1 +1,1 @@
-# android_demok
+# Mobilszoftver-platformok - Android demó példakódok
