@@ -40,3 +40,6 @@ Az elvárt eredmény:
 # Snackbar
 Készítsünk egy Snackbart, amely egy ExtendedFloatingActionButton nyomására láthatóvá válik!
 <center><img src="./pictures/XSnackbar.png" width="300"></center>
+
+# További gyakorló feladatok
+https://developer.android.com/codelabs/basic-android-kotlin-compose-composables-practice-problems
