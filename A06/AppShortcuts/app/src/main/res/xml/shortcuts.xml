@@ -1,0 +1,16 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:targetApi="25">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/baseline_person_black_24"
+        android:shortcutId="shortcut_name"
+        android:shortcutShortLabel="@string/app_name">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="hu.bme.aut.appshortcuts.MainActivity"
+            android:targetPackage="hu.bme.aut.appshortcuts">
+        </intent>
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>
