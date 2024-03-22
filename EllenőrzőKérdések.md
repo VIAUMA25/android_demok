@@ -23,10 +23,15 @@
 # 3. Előadás
 * Mi az a State Hoisting? Mik az előnyei?
 * Mi az állapot a Compose-ban? Mire használjuk a remember kulcsszót?
-* Mik a Side Effectek Compose-ban? Adjon egy gyakran használt * Side Effectre példát!
+* Mik a Side Effectek Compose-ban? Adjon példát egy gyakran használt Side Effectre!
+* Soroljon fel 3 összetettebb layout elemet Composeban, és 1-1 mondatban mutassa be őket!
 # 4. Előadás
 * Soroljon fel legalább 4 animáció típust, és egy-egy mondatban mutassa be, hogy mire szolgálnak!
 * Hogyan tudunk animációkat időzíteni? Milyen opciókat tudunk megadni?
 * Mik Compose-ban a Google térkép használatának lépései?
 # 5. Előadás
 # 6. Előadás
+* Milyen API-kat az Android a Compose teszteléshez? Melyik mire szolgál?
+* Soroljon fel kettő Core és legalább 2 egyéb Android Vitals mérőszámot!
+* Mik az alkalmazás publikálás előkészítésének lépései?
+* Milyen App Shortcut típusokat ismer? Melyik mire érdemes használni?
