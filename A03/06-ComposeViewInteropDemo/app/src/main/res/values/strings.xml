@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ComposeViewInteropDemo</string>
+    <string name="demo_view_text">Demo view text</string>
+    <string name="demo_button">Demo button</string>
+</resources>
