@@ -1,11 +1,15 @@
 package hu.bme.aut.android.composeviewinteropdemo
+
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -21,7 +25,6 @@ import hu.bme.aut.android.composeviewinteropdemo.ui.theme.ComposeViewInteropDemo
 class LaunchActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityLaunchBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +53,7 @@ fun DemoItems(title: String) {
 
     Column(
         verticalArrangement = Arrangement.SpaceBetween,
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState())
     ) {
         Text(text = "Hello $title!")
         Button(onClick = {
@@ -60,11 +63,11 @@ fun DemoItems(title: String) {
             Text(text = "Navigate to main")
         }
 
-        repeat(10) {
+        repeat(15) {
             Text(
                 "Demo item $it",
-               modifier = Modifier.background(androidx.compose.ui.graphics.Color.Green,
-                   RectangleShape)
+                modifier = Modifier.background(androidx.compose.ui.graphics.Color.Green,
+                    RectangleShape)
             )
         }
     }
