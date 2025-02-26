@@ -1,6 +1,9 @@
 package hu.bme.aut.android.composecontainers.ui.screen.components
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.rounded.Menu
 import androidx.compose.material3.DropdownMenu
@@ -20,30 +23,30 @@ import androidx.compose.runtime.setValue
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainTopBar(title: String){
+fun MainTopBar(title: String, onNavigationIconClick: () -> Unit) {
     var expanded by remember { mutableStateOf(false) }
     TopAppBar(
-        title = { Text(title)},
+        title = { Text(title) },
         colors = TopAppBarDefaults.topAppBarColors(
             containerColor =
             MaterialTheme.colorScheme.secondaryContainer
         ),
         navigationIcon = {
             IconButton(
-                onClick = {  }
-                    ) {
-                        Icon(imageVector = Icons.Rounded.Menu, contentDescription = "Drawer Icon")
-                    }
-                },
+                onClick = onNavigationIconClick
+            ) {
+                Icon(imageVector = Icons.Default.Menu, contentDescription = "Drawer Icon")
+            }
+        },
         actions = {
             IconButton(
-                onClick = { expanded = !expanded}
+                onClick = { expanded = !expanded }
             ) {
                 Icon(Icons.Filled.MoreVert, contentDescription = null)
             }
             DropdownMenu(
                 expanded = expanded,
-                onDismissRequest = { expanded = false}) {
+                onDismissRequest = { expanded = false }) {
                 DropdownMenuItem(onClick = { },
                     text = { Text(text = "demo") })
                 DropdownMenuItem(onClick = { },
