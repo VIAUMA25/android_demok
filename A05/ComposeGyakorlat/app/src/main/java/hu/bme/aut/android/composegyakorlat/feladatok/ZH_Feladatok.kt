@@ -1,22 +1,9 @@
-package hu.bme.aut.composegyakorlat.feladatok
+package hu.bme.aut.android.composegyakorlat.feladatok
 
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.material3.RadioButton
-import kotlinx.coroutines.launch
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.remember
-import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.SnackbarHost
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Icon
-import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material.icons.filled.Create
-import androidx.compose.material.icons.Icons
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,8 +11,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -33,63 +21,45 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontVariation.weight
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import hu.bme.aut.composegyakorlat.R
-import hu.bme.aut.composegyakorlat.ui.theme.ComposeGyakorlatTheme
+import hu.bme.aut.android.composegyakorlat.ui.theme.ComposeGyakorlatTheme
 
 @Composable
-fun ZH_CenterColumn() {
+fun ZH1() {
     Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(text = "BME")
+        Text(text = "VIK")
+        Text(text = "AUT")
+    }
+}
+
+@Composable
+fun ZH2() {
+    Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        Text("BME")
-        Text("VIK")
-        Text("AUT")
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun ZH_CenterColumnPreview() {
-    ComposeGyakorlatTheme {
-        ZH_CenterColumn()
-    }
-}
-
-@Composable
-fun ZH_RowColumn() {
-    Column(Modifier.fillMaxWidth()) {
-        Row(
-            Modifier
-                .weight(1f)
-        ) {
+        Row(Modifier.weight(1f)) {
             Text(
                 text = "1",
                 modifier = Modifier
                     .fillMaxHeight()
-                    .weight(2f)
                     .background(Color.Magenta)
+                    .weight(2f)
             )
             Text(
-                text = "2",
+                text = "1",
                 modifier = Modifier
                     .fillMaxHeight()
-                    .weight(1f)
                     .background(Color.Yellow)
+                    .weight(1f)
             )
         }
         Row(Modifier.weight(2f)) {
@@ -97,34 +67,29 @@ fun ZH_RowColumn() {
                 text = "3",
                 modifier = Modifier
                     .fillMaxHeight()
-                    .weight(1f)
                     .background(Color.Green)
+                    .weight(1f)
             )
             Text(
                 text = "4",
                 modifier = Modifier
                     .fillMaxHeight()
-                    .weight(2f)
                     .background(Color.Red)
+                    .weight(2f)
             )
         }
     }
 }
 
-@Preview(showBackground = true)
 @Composable
-fun ZH_RowColumnPreview() {
-    ComposeGyakorlatTheme {
-        ZH_RowColumn()
-    }
-}
-
-@Composable
-fun ZH_Box() {
+fun ZH3() {
     Box(
         modifier = Modifier
             .size(400.dp)
-            .border(width = 2.dp, color = Color.Cyan)
+            .border(
+                width = 2.dp,
+                color = Color.Cyan
+            )
     ) {
         Button(
             onClick = {},
@@ -147,41 +112,64 @@ fun ZH_Box() {
     }
 }
 
-@Preview(showBackground = true)
 @Composable
-fun ZH_BoxDemo() {
-    ComposeGyakorlatTheme {
-        ZH_Box()
-    }
-}
-
-@Composable
-fun ZH_Card() {
+fun ZH4() {
+    val context = LocalContext.current
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .padding(15.dp)
-            .clickable { },
-        elevation = CardDefaults.cardElevation(
-            defaultElevation = 8.dp,
-        )
+            .clickable {
+                Toast.makeText(
+                    context,
+                    "Clicked",
+                    Toast.LENGTH_LONG
+                ).show()
+            },
+        elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
     ) {
         Column(
-            modifier = Modifier.padding(15.dp)
+            modifier = Modifier
+                .padding(15.dp)
         ) {
-            Text("Vastag szöveg", fontWeight = FontWeight.Bold)
-            Text("Piros szöveg", color = Color.Red)
+            Text(text = "Vastag szöveg", fontWeight = FontWeight.Bold)
+            Text(text = "Piros szöveg", color = Color.Red)
         }
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showSystemUi = true)
 @Composable
-fun ZH_CardPreview() {
+fun ZH1Preview() {
     ComposeGyakorlatTheme {
-        ZH_Card()
+        Box(modifier = Modifier.safeDrawingPadding()) {
+            ZH1()
+        }
     }
 }
 
+@Preview(showSystemUi = true)
+@Composable
+fun ZH2Preview() {
+    ComposeGyakorlatTheme {
+        Box(modifier = Modifier.safeDrawingPadding()) {
+            ZH2()
+        }
+    }
+}
 
+@Preview(showSystemUi = true)
+@Composable
+fun ZH3Preview() {
+    Box(modifier = Modifier.safeDrawingPadding()) {
+        ZH3()
+    }
+}
 
+@Preview(showSystemUi = true)
+@Composable
+fun ZH4Preview() {
+    Box(modifier = Modifier.safeDrawingPadding()) {
+        ZH4()
+    }
+}

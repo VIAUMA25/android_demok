@@ -1,4 +1,4 @@
-package hu.bme.aut.composegyakorlat
+package hu.bme.aut.android.composegyakorlat
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package hu.bme.aut.composegyakorlat.ui.theme
+package hu.bme.aut.android.composegyakorlat.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
