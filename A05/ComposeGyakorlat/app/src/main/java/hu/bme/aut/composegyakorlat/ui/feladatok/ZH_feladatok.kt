@@ -1,4 +1,4 @@
-package hu.bme.aut.android.composegyakorlat.feladatok
+package hu.bme.aut.composegyakorlat.ui.feladatok
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -26,7 +26,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import hu.bme.aut.android.composegyakorlat.ui.theme.ComposeGyakorlatTheme
+import hu.bme.aut.composegyakorlat.ui.theme.ComposeGyakorlatTheme
 
 @Composable
 fun ZH1() {
@@ -55,7 +55,7 @@ fun ZH2() {
                     .weight(2f)
             )
             Text(
-                text = "1",
+                text = "2",
                 modifier = Modifier
                     .fillMaxHeight()
                     .background(Color.Yellow)
@@ -118,7 +118,7 @@ fun ZH4() {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(15.dp)
+            .padding(16.dp)
             .clickable {
                 Toast.makeText(
                     context,
@@ -130,7 +130,7 @@ fun ZH4() {
     ) {
         Column(
             modifier = Modifier
-                .padding(15.dp)
+                .padding(16.dp)
         ) {
             Text(text = "Vastag szöveg", fontWeight = FontWeight.Bold)
             Text(text = "Piros szöveg", color = Color.Red)

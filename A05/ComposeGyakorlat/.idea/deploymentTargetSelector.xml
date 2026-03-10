@@ -4,8 +4,16 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2026-03-10T10:25:17.585870800Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=4T75HUWWOR4PMNUW" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="ZH1Preview">
+      <SelectionState runConfigName="X_LazyColumn">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

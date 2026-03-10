@@ -13,7 +13,7 @@ Az elvárt eredmény:
 Jelenítsünk meg egy listát a lenti városok nevével! 
 
 *private val cityList = mutableListOf("Szeged", "Pécs", "Debrecen", "Budapest")*  
-* Az elemek jelenjenek meg szürke háttéren fehér betűvel, 20-as betűméretben, a képernyő teljes szélességében!
+* Az elemek jelenjenek meg kék háttéren sárga betűvel, 20-as betűméretben, a képernyő teljes szélességében!
 * A sorok elejére tegyünk ikonokat!
 * Két sor közé tegyünk elválasztó vonalat!  
 * Állítsunk be paddinget az igényes megjelenítéshez!
@@ -22,8 +22,6 @@ Jelenítsünk meg egy listát a lenti városok nevével!
 Az elvárt eredmény:
 <center><img src="./pictures/XSimpleList.png" width="300"></center>
 
-
-Az elvárt eredmény:
 
 # DropDownMenu
 Készítsünk DropDownMenu-t két opcióval!  
@@ -34,15 +32,18 @@ Készítsünk DropDownMenu-t két opcióval!
 Az elvárt eredmény:
 <center><img src="./pictures/XDropDownMenu.png" width="300"></center>
 
+
 # Scaffold
 Készítsünk egyszerű Material Design alkalmazás vázat, az alapértelmezett színek használatával!
 
 Az elvárt eredmény:
 <center><img src="./pictures/XScaffold.png" width="300"></center>
 
+
 # Snackbar
 Az előző gyakorlatot egészítsük ki egy Snackbarral, amely egy ExtendedFloatingActionButton nyomására láthatóvá válik!
 <center><img src="./pictures/XSnackbar.png" width="300"></center>
+
 
 # További gyakorló feladatok
 https://developer.android.com/codelabs/basic-android-kotlin-compose-composables-practice-problems

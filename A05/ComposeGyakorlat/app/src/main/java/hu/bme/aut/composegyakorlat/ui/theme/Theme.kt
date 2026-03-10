@@ -1,4 +1,4 @@
-package hu.bme.aut.android.composegyakorlat.ui.theme
+package hu.bme.aut.composegyakorlat.ui.theme
 
 import android.app.Activity
 import android.os.Build
